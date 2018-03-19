@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import Filter from './TeamFilter';
+import logo from './../assets/img/twitch_white_logo.png';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -8,24 +11,30 @@ class App extends Component {
         user_login: 'disguisedtoasths',
         user_id: '87204022',
         online: false,
-        thumbnail_url: null
+        thumbnail_url: null,
+        team: 'Offline TV and Friends'
       }, {
         user_login: 'fedmyster',
         user_id: '39040630',
         online: false,
-        thumbnail_url: null
+        thumbnail_url: null,
+        team: 'Offline TV and Friends'
       }, {
         user_login: 'xchocobars',
         user_id: '42583390',
         online: false,
-        thumbnail_url: null
+        thumbnail_url: null,
+        team: 'SF Shock'
       }, {
         user_login: 'tsm_myth',
         user_id: '110690086',
         online: false,
-        thumbnail_url: null
-      }]
+        thumbnail_url: null,
+        team: 'SF Shock'
+      }],
+      filteredTeam: null
     }
+    this.filterTeams = this.filterTeams.bind(this);
   }
   componentDidMount() {
     this.getTwitchData();
@@ -63,12 +72,26 @@ class App extends Component {
     // console.log(json.data);
     this.getStreamData(json.data);
   }
-  render() {
-    return this.state.streams.filter(stream => stream.online === true).map(stream => {
+  filterTeams(e) {
+    this.setState({ filteredTeam: e.target.innerHTML });
+  }
+  renderOnline() {
+    return (this.state.filteredTeam === null ? this.state.streams : this.state.streams.filter(stream => stream.team === this.state.filteredTeam)).map(stream => {
       return (
         <div key={stream.user_id}>{stream.user_login}<br/>viewers: {stream.viewer_count}</div>
       );
     });
+  }
+  render() {
+    return (
+      <div>
+        <div className="header">
+          <img src={logo} alt="Twitch Logo" />
+        </div>
+        <Filter filterTeams={this.filterTeams} />
+        {this.renderOnline()}
+      </div>
+    );
   }
 }
 
