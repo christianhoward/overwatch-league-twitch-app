@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Filter from './TeamFilter';
-import logo from './../assets/img/twitch_white_logo.png';
 
 class App extends Component {
   constructor(props) {
@@ -86,7 +85,7 @@ class App extends Component {
     return (
       <div>
         <div className="header">
-          <img src={logo} alt="Twitch Logo" />
+          <img src={window.location.origin + '/img/twitch_white_logo.png'} alt="Twitch Logo" />
         </div>
         <Filter filterTeams={this.filterTeams} />
         {this.renderOnline()}
