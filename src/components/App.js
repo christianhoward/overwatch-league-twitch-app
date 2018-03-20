@@ -9,7 +9,7 @@ class App extends Component {
     super(props);
     this.state = { 
       streams: [],
-      filteredTeam: null
+      filteredTeam: ''
     }
     this.filterTeams = this.filterTeams.bind(this);
   }
@@ -50,11 +50,11 @@ class App extends Component {
     // console.log(json.data);
     this.getStreamData(json.data);
   }
-  filterTeams(e) {
-    this.setState({ filteredTeam: e.target.getAttribute('data-name') });
+  filterTeams(team) {
+    this.setState({ filteredTeam: team });
   }
   renderOnline() {
-    return (this.state.filteredTeam === null ? this.state.streams : this.state.streams.filter(stream => stream.team === this.state.filteredTeam)).map(stream => {
+    return (this.state.filteredTeam === '' ? this.state.streams : this.state.streams.filter(stream => stream.team === this.state.filteredTeam)).map(stream => {
       return (
         <div key={stream.user_id}>{stream.user_login}<br/>viewers: {stream.viewer_count}</div>
       );
@@ -66,7 +66,7 @@ class App extends Component {
         <div className="header">
           <img src={window.location.origin + '/img/twitch_white_logo.png'} alt="Twitch Logo" />
         </div>
-        <Filter filterTeams={this.filterTeams} />
+        <Filter filteredTeam={this.state.filteredTeam} filterTeams={this.filterTeams} />
         {this.renderOnline()}
       </div>
     );
