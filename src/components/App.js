@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Filter from './TeamFilter';
+import Streamers from './StreamerCards';
 
 import { streams } from './data/data.js';
 
@@ -22,8 +23,9 @@ class App extends Component {
     newState.forEach(user => {
       activeStreams.find(onlineUser => {
         if (onlineUser.user_id === user.user_id) {
+          let url = onlineUser.thumbnail_url.replace(/({width})|({height})/ig, 200);
           user.online = true;
-          user.thumbnail_url = onlineUser.thumbnail_url;
+          user.thumbnail_url = url;
           user.viewer_count = onlineUser.viewer_count;
           user.game_id = onlineUser.game_id;
           user.title = onlineUser.title;
@@ -53,13 +55,6 @@ class App extends Component {
   filterTeams(team) {
     this.setState({ filteredTeam: team });
   }
-  renderOnline() {
-    return (this.state.filteredTeam === '' ? this.state.streams : this.state.streams.filter(stream => stream.team === this.state.filteredTeam)).map(stream => {
-      return (
-        <div key={stream.user_id}>{stream.user_login}<br/>viewers: {stream.viewer_count}</div>
-      );
-    });
-  }
   render() {
     return (
       <div>
@@ -67,7 +62,7 @@ class App extends Component {
           <img src={window.location.origin + '/img/twitch_white_logo.png'} alt="Twitch Logo" />
         </div>
         <Filter filteredTeam={this.state.filteredTeam} filterTeams={this.filterTeams} />
-        {this.renderOnline()}
+        <Streamers {...this.state} />
       </div>
     );
   }
