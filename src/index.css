@@ -40,13 +40,43 @@ body {
   display: none;
 }
 
+.streamers-grid {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
 .streamer-card {
-  background: lightgray;
-  width: 300px;
-  height: 150px;
-  border: 1px solid black;
+  background: white;
+  width: 400px;
+  height: 200px;
+  border: 2px solid black;
   border-radius: 5px;
+  color: black;
+}
+
+.card-header {
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+button {
+  background-color: purple;
+  width: 100px;
+  height: 40px;
   color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-rows: 80px 80px 40px;
 }
 
 @media only screen and (max-width: 750px) {
