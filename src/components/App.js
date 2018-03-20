@@ -2,41 +2,20 @@ import React, { Component } from 'react';
 
 import Filter from './TeamFilter';
 
+import { streams } from './data/data.js';
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      streams: [{
-        user_login: 'disguisedtoasths',
-        user_id: '87204022',
-        online: false,
-        thumbnail_url: null,
-        team: 'Offline TV and Friends'
-      }, {
-        user_login: 'fedmyster',
-        user_id: '39040630',
-        online: false,
-        thumbnail_url: null,
-        team: 'Offline TV and Friends'
-      }, {
-        user_login: 'xchocobars',
-        user_id: '42583390',
-        online: false,
-        thumbnail_url: null,
-        team: 'SF Shock'
-      }, {
-        user_login: 'tsm_myth',
-        user_id: '110690086',
-        online: false,
-        thumbnail_url: null,
-        team: 'SF Shock'
-      }],
+      streams: [],
       filteredTeam: null
     }
     this.filterTeams = this.filterTeams.bind(this);
   }
   componentDidMount() {
-    this.getTwitchData();
+    this.setState({ streams });
+    setTimeout(() => { this.getTwitchData()}, 1000);
   }
   getStreamData(activeStreams) {
     let newState = this.state.streams;
@@ -72,7 +51,7 @@ class App extends Component {
     this.getStreamData(json.data);
   }
   filterTeams(e) {
-    this.setState({ filteredTeam: e.target.innerHTML });
+    this.setState({ filteredTeam: e.target.getAttribute('data-name') });
   }
   renderOnline() {
     return (this.state.filteredTeam === null ? this.state.streams : this.state.streams.filter(stream => stream.team === this.state.filteredTeam)).map(stream => {
