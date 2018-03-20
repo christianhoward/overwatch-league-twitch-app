@@ -36,4 +36,24 @@ body {
   border-radius: 5px;
 }
 
+.team-dropdown {
+  display: none;
+}
 
+@media only screen and (max-width: 750px) {
+  .team-dropdown {
+    text-align: center;
+    padding-bottom: 20px;
+    display: block;
+  }
+
+  .team-dropdown > select {
+    background-color: #6441A4;
+    color: white;
+    font-size: 16px;
+  }
+
+  .team-filter-grid {
+    display: none;
+  }
+}
