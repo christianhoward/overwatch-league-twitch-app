@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Filter from './TeamFilter';
+import Filters from './Filters';
 import Streamers from './StreamerCards';
 
 import { streams } from './data/data.js';
@@ -70,7 +70,7 @@ class App extends Component {
         <div className="header">
           <img src={window.location.origin + '/img/twitch_white_logo.png'} alt="Twitch Logo" />
         </div>
-        <Filter filteredTeam={this.state.filteredTeam} filterTeams={this.filterTeams} filterStatus={this.filterStatus} clearFilters={this.clearFilters} />
+        <Filters filteredTeam={this.state.filteredTeam} filterTeams={this.filterTeams} filterStatus={this.filterStatus} clearFilters={this.clearFilters} />
         <div style={{ paddingBottom: '10px' }}>
           <Streamers {...this.state} />
         </div>
