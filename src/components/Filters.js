@@ -7,7 +7,7 @@ class Filters extends Component {
         super(props);
         this.state = {
             teams: [],
-            statusOptions: [{ name: 'All', value: '', color: null }, { name: 'Online', value: true, color: 'green' }, { name: 'Offline', value: false, color: 'red' }]
+            statusOptions: [{ name: 'All', value: '', color: '#6441A4' }, { name: 'Online', value: true, color: 'green' }, { name: 'Offline', value: false, color: 'red' }]
         }
     }
     componentDidMount() {
@@ -15,11 +15,19 @@ class Filters extends Component {
     }
     renderTeams() {
         return this.state.teams.map(team => {
-            return (
-                <div className="team-logo" key={team.name}>
-                    <img src={window.location.origin + `/img/team-logos/${team.logo}`} alt={team.name} onClick={(e) => this.props.filterTeams(e.target.getAttribute('data-name'))} data-name={team.name}/>
-                </div>
-            );
+            if (team.name === this.props.filteredTeam) {
+                return (
+                    <div className="team-logo active" key={team.name}>
+                        <img src={window.location.origin + `/img/team-logos/${team.logo}`} alt={team.name} onClick={(e) => this.props.filterTeams(e.target.getAttribute('data-name'))} data-name={team.name}/>
+                    </div>
+                );
+            } else {
+                return (
+                    <div className="team-logo" key={team.name}>
+                        <img src={window.location.origin + `/img/team-logos/${team.logo}`} alt={team.name} onClick={(e) => this.props.filterTeams(e.target.getAttribute('data-name'))} data-name={team.name}/>
+                    </div>
+                );
+            }
         });
     }
     renderTeamDropdown() {
@@ -30,7 +38,13 @@ class Filters extends Component {
     renderStatus() {
         return this.state.statusOptions.map(statusOption => {
             return (
-                <button key={statusOption.name} onClick={() => this.props.filterStatus(statusOption.value)} style={{ backgroundColor: `${statusOption.color}` }}>{statusOption.name}</button>
+                <div className="radio" key={statusOption.name}>
+                    <input type="radio" name="status" id={statusOption.name}
+                        value={statusOption.value} 
+                        checked={this.props.filteredStatus === statusOption.value} 
+                        onChange={() => this.props.filterStatus(statusOption.value)} />
+                    <label htmlFor={statusOption.name} style={{ backgroundColor: `${statusOption.color}` }}>{statusOption.name}</label>
+                </div>
             );
         });
     }

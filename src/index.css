@@ -26,6 +26,11 @@ body {
   height: 50px;
 }
 
+.active {
+  -webkit-filter: drop-shadow(5px 5px 5px #6441A4 );
+  filter: drop-shadow(5px 5px 5px #6441A4);
+}
+
 .owl-logo {
   text-align: center;
   padding: 10px;
@@ -77,6 +82,32 @@ body {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+input[type=radio] + label {
+	border-radius: 5px;
+	border: 2px solid #d3d3d3;
+	margin: 3px;
+	margin-bottom: 0;
+	padding: 4px 8px;
+	line-height: 20px;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: white;
+	cursor: pointer;
+}
+
+.radio {
+	display: inline;
+}
+
+input[type=radio] {
+	display: none;
+}
+
+input[type=radio]:checked + label {
+	box-shadow: 0 0 0 1pt #6441A4;
 }
 
 button {
