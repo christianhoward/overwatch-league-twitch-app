@@ -152,6 +152,69 @@ exports.streams = [
         online: false,
         thumbnail_url: 'dallas-fuel.png',
         team: 'Dallas Fuel'
+    }, {
+        name: 'zappis',
+        user_login: 'zappis',
+        user_id: '29493830',
+        online: false,
+        thumbnail_url: 'florida-mayhem.png',
+        team: 'Florida Mayhem'
+    }, {
+        name: 'Manneten',
+        user_login: 'manneten',
+        user_id: '46769380',
+        online: false,
+        thumbnail_url: 'florida-mayhem.png',
+        team: 'Florida Mayhem'
+    }, {
+        name: 'Sayaplayer',
+        user_login: 'hjm3935',
+        user_id: '85352894',
+        online: false,
+        thumbnail_url: 'florida-mayhem.png',
+        team: 'Florida Mayhem'
+    }, {
+        name: 'Logix',
+        user_login: 'logixow',
+        user_id: '26508156',
+        online: false,
+        thumbnail_url: 'florida-mayhem.png',
+        team: 'Florida Mayhem'
+    }, {
+        name: 'Zebbosai',
+        user_login: 'zebbosai',
+        user_id: '23064268',
+        online: false,
+        thumbnail_url: 'florida-mayhem.png',
+        team: 'Florida Mayhem'
+    }, {
+        name: 'CWoosH',
+        user_login: 'cwoosh',
+        user_id: '123618783',
+        online: false,
+        thumbnail_url: 'florida-mayhem.png',
+        team: 'Florida Mayhem'
+    }, {
+        name: 'TviQ',
+        user_login: 'tvique',
+        user_id: '27728003',
+        online: false,
+        thumbnail_url: 'florida-mayhem.png',
+        team: 'Florida Mayhem'
+    }, {
+        name: 'aWesomeGuy',
+        user_login: 'aWesomeGuy_ow',
+        user_id: '127597366',
+        online: false,
+        thumbnail_url: 'florida-mayhem.png',
+        team: 'Florida Mayhem'
+    }, {
+        name: 'Zuppeh',
+        user_login: 'zuppehow',
+        user_id: '103006437',
+        online: false,
+        thumbnail_url: 'florida-mayhem.png',
+        team: 'Florida Mayhem'
     }
 ];
 
