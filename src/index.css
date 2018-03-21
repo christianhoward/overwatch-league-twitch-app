@@ -41,10 +41,11 @@ body {
 }
 
 .streamers-grid {
+  margin: 0;
   padding-top: 10px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 1rem;
 }
 
 .streamer-card {
@@ -54,6 +55,14 @@ body {
   border: 2px solid black;
   border-radius: 5px;
   color: black;
+  margin: 0 auto;
+  position: relative;
+}
+
+.streamer-card:hover {
+  box-shadow: 5px 5px 3px rgba(100, 65, 164, 0.70);
+  top: -5px;
+  left: -5px;
 }
 
 .card-header {
@@ -66,7 +75,7 @@ body {
 }
 
 button {
-  background-color: purple;
+  background-color: #6441A4;
   width: 100px;
   height: 40px;
   color: white;
