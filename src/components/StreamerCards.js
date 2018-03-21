@@ -2,7 +2,17 @@ import React, { Component } from 'react';
 
 class StreamerCards extends Component {
     renderCard() {
-        return (this.props.filteredTeam === '' ? this.props.streams : this.props.streams.filter(stream => stream.team === this.props.filteredTeam)).map(stream => {
+        let streams;
+        if (this.props.filteredTeam !== '' && this.props.filteredStatus !== '') {
+            streams = this.props.streams.filter(stream => stream.team === this.props.filteredTeam && stream.online === this.props.filteredStatus);
+        } else if (this.props.filteredTeam === '' && this.props.filteredStatus !== '') {
+            streams = this.props.streams.filter(stream => stream.online === this.props.filteredStatus);
+        } else if (this.props.filteredTeam !== '' && this.props.filteredStatus === '') {
+            streams = this.props.streams.filter(stream => stream.team === this.props.filteredTeam);
+        } else {
+            streams = this.props.streams;
+        }
+        return streams.map(stream => {
             if (stream.online === true) {
                 return (
                     <div className="streamer-card" key={stream.user_id}>
