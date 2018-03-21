@@ -5,14 +5,14 @@ class StreamerCards extends Component {
         return (this.props.filteredTeam === '' ? this.props.streams : this.props.streams.filter(stream => stream.team === this.props.filteredTeam)).map(stream => {
             if (stream.online === true) {
                 return (
-                    <div className="streamer-card">
+                    <div className="streamer-card" key={stream.user_id}>
                         <div className="card-grid">
                             <div>
-                                <img src={stream.thumbnail_url} />
+                                <img src={stream.thumbnail_url} alt={stream.user_login} />
                             </div>
                             <div className="demo-grid">
                                 <div className="card-header">
-                                    <div style={{ fontSize: '18px' }}>{stream.user_login}</div>
+                                    <div style={{ fontSize: '18px' }}>{stream.name}</div>
                                     <div style={{ color: 'green' }}>{stream.online ? 'Online' : 'Offline'}</div>
                                 </div>
                                 <div style={{ paddingLeft: '5px' }}>
@@ -27,14 +27,14 @@ class StreamerCards extends Component {
                 );
             } else {
                 return (
-                    <div className="streamer-card">
+                    <div className="streamer-card" key={stream.user_id}>
                         <div className="card-grid">
                             <div>
-                                <img src={window.location.origin + `/img/team-logos/${stream.thumbnail_url}`} style={{ height: '200px' }}/>
+                                <img src={window.location.origin + `/img/team-logos/${stream.thumbnail_url}`} style={{ height: '200px' }} alt={stream.user_login} />
                             </div>
                             <div className="demo-grid">
                                 <div className="card-header">
-                                    <div style={{ fontSize: '18px' }}>{stream.user_login}</div>
+                                    <div style={{ fontSize: '18px' }}>{stream.name}</div>
                                     <div style={{ color: 'red' }}>{stream.online ? 'Online' : 'Offline'}</div>
                                 </div>
                                 <div></div>
