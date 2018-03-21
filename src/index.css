@@ -40,6 +40,11 @@ body {
   display: none;
 }
 
+.status-filter {
+  text-align: center;
+  padding: 10px;
+}
+
 .streamers-grid {
   margin: 0;
   padding-top: 10px;

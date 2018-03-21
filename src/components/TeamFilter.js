@@ -6,7 +6,8 @@ class TeamFilter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            teams: []
+            teams: [],
+            statusOptions: [{ name: 'All', value: '', color: null }, { name: 'Online', value: true, color: 'green' }, { name: 'Offline', value: false, color: 'red' }]
         }
     }
     componentDidMount() {
@@ -26,11 +27,18 @@ class TeamFilter extends Component {
             return <option key={team.name} data-name={team.name}>{team.name}</option>
         });
     }
+    renderStatus() {
+        return this.state.statusOptions.map(statusOption => {
+            return (
+                <button key={statusOption.name} onClick={() => this.props.filterStatus(statusOption.value)} style={{ backgroundColor: `${statusOption.color}` }}>{statusOption.name}</button>
+            );
+        });
+    }
     render() {
         return (
             <div>
                 <div className="owl-logo">
-                    <img src={window.location.origin + '/img/owl-logo.jpg'} data-name='' onClick={(e) => this.props.filterTeams(e.target.getAttribute('data-name'))} alt="Overwatch Leauge Logo" />
+                    <img src={window.location.origin + '/img/owl-logo.jpg'} onClick={(e) => this.props.clearFilters()} alt="Overwatch League Logo" />
                 </div>  
                 <div className="team-dropdown">
                     <select value={this.props.filteredTeam} onChange={(e) => this.props.filterTeams(e.target.options[e.target.selectedIndex].getAttribute('data-name'))}>
@@ -40,6 +48,9 @@ class TeamFilter extends Component {
                 </div>                  
                 <div className="team-filter-grid">
                     {this.renderTeams()}
+                </div>
+                <div className="status-filter">
+                    {this.renderStatus()}
                 </div>
             </div>
         );

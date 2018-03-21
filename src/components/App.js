@@ -10,12 +10,15 @@ class App extends Component {
     super(props);
     this.state = { 
       streams: [],
-      filteredTeam: ''
+      filteredTeam: '',
+      filteredStatus: ''
     }
     this.filterTeams = this.filterTeams.bind(this);
+    this.filterStatus = this.filterStatus.bind(this);
+    this.clearFilters = this.clearFilters.bind(this);
   }
   componentDidMount() {
-    this.setState({ streams });
+    this.setState({ streams: streams.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1) });
     setTimeout(() => { this.getTwitchData()}, 1000);
   }
   getStreamData(activeStreams) {
@@ -55,14 +58,22 @@ class App extends Component {
   filterTeams(team) {
     this.setState({ filteredTeam: team });
   }
+  filterStatus(status) {
+    this.setState({ filteredStatus: status})
+  }
+  clearFilters() {
+    this.setState({ filteredStatus: '', filteredTeam: '' });
+  }
   render() {
     return (
       <div>
         <div className="header">
           <img src={window.location.origin + '/img/twitch_white_logo.png'} alt="Twitch Logo" />
         </div>
-        <Filter filteredTeam={this.state.filteredTeam} filterTeams={this.filterTeams} />
-        <Streamers {...this.state} />
+        <Filter filteredTeam={this.state.filteredTeam} filterTeams={this.filterTeams} filterStatus={this.filterStatus} clearFilters={this.clearFilters} />
+        <div style={{ paddingBottom: '10px' }}>
+          <Streamers {...this.state} />
+        </div>
       </div>
     );
   }
