@@ -1,28 +1,157 @@
 exports.streams = [
     {
-        user_login: 'disguisedtoasths',
-        user_id: '87204022',
-        online: false,
-        thumbnail_url: 'seoul-dynasty.png',
-        team: 'Seoul Dynasty'
-    }, {
-        user_login: 'fedmyster',
-        user_id: '39040630',
-        online: false,
-        thumbnail_url: 'dallas-fuel.png',
-        team: 'Dallas Fuel'
-    }, {
-        user_login: 'xchocobars',
-        user_id: '42583390',
-        online: false,
-        thumbnail_url: 'sf-shock.png',
-        team: 'SF Shock'
-    }, {
         user_login: 'tsm_myth',
         user_id: '110690086',
         online: false,
         thumbnail_url: 'sf-shock.png',
         team: 'SF Shock'
+    }, {
+        name: 'DreamKazper',
+        user_login: 'dreamkazper',
+        user_id: '68624555',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'Snow',
+        user_login: 'snow_iwnl',
+        user_id: '125494549',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'Gamsu',
+        user_login: 'GamsuOW',
+        user_id: '129958872',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'NotE',
+        user_login: 'NotEvenBleu',
+        user_id: '63034034',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'Neko',
+        user_login: 'nek0_0w',
+        user_id: '144486954',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'Avast',
+        user_login: 'avasto',
+        user_id: '32905366',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'STRIKER',
+        user_login: 'skawn4263',
+        user_id: '136116409',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'Kalios',
+        user_login: 'ow_kalios',
+        user_id: '132763247',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'Mistakes',
+        user_login: 'mistakesow',
+        user_id: '132369509',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'Kellex',
+        user_login: 'keliex',
+        user_id: '76581890',
+        online: false,
+        thumbnail_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
+        name: 'HarryHook',
+        user_login: 'harryhook',
+        user_id: '30257355',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'aKm',
+        user_login: 'akm_tv',
+        user_id: '31670989',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'Rascal',
+        user_login: 'rascal0723',
+        user_id: '144636878',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'OGE',
+        user_login: 'oge_ow',
+        user_id: '191580639',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'Taimou',
+        user_login: 'taimoutv',
+        user_id: '54581600',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'Custa',
+        user_login: 'custa',
+        user_id: '114865766',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'chipshajen',
+        user_login: 'chipshajen',
+        user_id: '31735052',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'Mickie',
+        user_login: 'mickiepp',
+        user_id: '141713412',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'Seagull',
+        user_login: 'A_Seagull',
+        user_id: '19070311',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'cocco',
+        user_login: 'cocco',
+        user_id: '117748199',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
+        name: 'EFFECT',
+        user_login: 'eff2ct',
+        user_id: '135013913',
+        online: false,
+        thumbnail_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
     }
 ];
 
