@@ -19,7 +19,7 @@ class App extends Component {
   }
   componentDidMount() {
     this.setState({ streams: streams.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1) });
-    setTimeout(() => { this.getTwitchData()}, 1000);
+    setTimeout(() => { this.getDataStrings()}, 1000);
   }
   getStreamData(activeStreams) {
     let newState = this.state.streams;
@@ -37,16 +37,31 @@ class App extends Component {
     });
     this.setState({ streams: newState });
   }
-  async getTwitchData() {
-    let concat = '';
+  getDataStrings() {
+    let userIDsAtlantic = '';
+    let userIDsPacific = '';
+    let teams = ['Boston Uprising', 'Florida Mayhem', 'Houston Outlaws', 'London Spitfire', 'New York Excelsior', 'Philadelphia Fusion'];
     this.state.streams.forEach(user => {
-      if (concat === '') {
-        concat += `user_id=${user.user_id}`;
+      if (teams.includes(user.team)) {
+        if (userIDsAtlantic === '') {
+          userIDsAtlantic += `user_id=${user.user_id}`;
+        } else {
+          userIDsAtlantic += `&user_id=${user.user_id}`;
+        }
       } else {
-        concat += `&user_id=${user.user_id}`;
+        if (userIDsPacific === '') {
+          userIDsPacific += `user_id=${user.user_id}`;
+        } else {
+          userIDsPacific += `&user_id=${user.user_id}`;
+        }
       }
     });
-    let url = `https://api.twitch.tv/helix/streams?${concat}`;
+    let urlAtlantic = `https://api.twitch.tv/helix/streams?${userIDsAtlantic}`;
+    let urlPacific = `https://api.twitch.tv/helix/streams?${userIDsPacific}`;
+    this.getTwitchData(urlAtlantic);
+    this.getTwitchData(urlPacific);
+  }
+  async getTwitchData(url) {
     const response = await fetch(url, { 
       method: 'GET', 
       headers: { 'Client-ID': 'chrlypyhyi13ef5uf1dilc9amybdp3' }
