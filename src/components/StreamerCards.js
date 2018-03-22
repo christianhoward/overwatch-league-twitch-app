@@ -21,15 +21,15 @@ class StreamerCards extends Component {
                                 <img src={stream.thumbnail_url} alt={stream.user_login} />
                             </div>
                             <div className="demo-grid">
-                                <div className="card-header" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
-                                    <div><img src={window.location.origin + `/img/team-logos/${stream.team_url}`} style={{height: '50px' }}/></div>
+                                <div className="card-header">
                                     <div>
                                         <div style={{ fontSize: '18px' }}>{stream.name}</div>
                                         <div style={{ color: 'green' }}>{stream.online ? 'Online' : 'Offline'}</div>
                                     </div>
                                 </div>
-                                <div style={{ paddingLeft: '5px' }}>
-                                    <div>Viewers: {stream.viewer_count}</div>
+                                <div style={{ textAlign: 'center', position: 'relative'}}>
+                                    <div><img src={window.location.origin + `/img/team-logos/${stream.team_url}`} style={{height: '50px' }}/></div>
+                                    <div style={{ position: 'absolute', bottom: '0', width: '100%'}}>Viewers: {stream.viewer_count}</div>
                                 </div>
                                 <div style={{ textAlign: 'center' }}>
                                     <a href={`https://www.twitch.tv/${stream.user_login}`} target="_blank"><button>Visit</button></a>
