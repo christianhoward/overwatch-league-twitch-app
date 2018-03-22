@@ -622,6 +622,188 @@ exports.streams = [
         online: false,
         team_url: 'philadelphia-fusion.png',
         team: 'Philadelphia Fusion'
+    }, {
+        name: 'Moth',
+        user_login: 'moth_ow',
+        user_id: '140090990',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'dhaK',
+        user_login: 'dhak',
+        user_id: '9485277',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'super',
+        user_login: 'supertf',
+        user_id: '59635827',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'BABYBAY',
+        user_login: 'a_babybay',
+        user_id: '142728478',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'sinatraa',
+        user_login: 'sinatraa',
+        user_id: '138094916',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'sleepy',
+        user_login: 'sleepy',
+        user_id: '135052907',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'Danteh',
+        user_login: 'Danteh',
+        user_id: '52914282',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'Nomy',
+        user_login: 'nomy',
+        user_id: '23593124',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'iddqd',
+        user_login: 'iddqd',
+        user_id: '123484627',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'Nevix',
+        user_login: 'nevixow',
+        user_id: '100336273',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'Architect',
+        user_login: 'qkralsgh1133',
+        user_id: '158846066',
+        online: false,
+        team_url: 'sf-shock.png',
+        team: 'San Francisco Shock'
+    }, {
+        name: 'Bunny',
+        user_login: 'cownsgur123',
+        user_id: '148495863',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'Miro',
+        user_login: 'a_miro',
+        user_id: '139765945',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'XepheR',
+        user_login: 'xepher1234',
+        user_id: '125381912',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'gido',
+        user_login: 'oogido',
+        user_id: '137917751',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'Wekeed',
+        user_login: 'klfdkn',
+        user_id: '52029630',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'Munchkin',
+        user_login: 'munchkinow',
+        user_id: '153587615',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'ZUNBA',
+        user_login: 'wg1646',
+        user_id: '137407035',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'KuKi',
+        user_login: 'ow_kuki',
+        user_id: '136235844',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'tobi',
+        user_login: 'ow_tobi',
+        user_id: '137440400',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'ryujehong',
+        user_login: 'wpghd321',
+        user_id: '128035304',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'Gambler',
+        user_login: '9ambler',
+        user_id: '130445097',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'FLETA',
+        user_login: 'fleta92',
+        user_id: '146057990',
+        online: false,
+        team_url: 'seoul-dynasty.png',
+        team: 'Seoul Dynasty'
+    }, {
+        name: 'Geguri',
+        user_login: 'frog135',
+        user_id: '126168826',
+        online: false,
+        team_url: 'shanghai-dragons.png',
+        team: 'Shanghai Dragons'
+    }, {
+        name: 'Ado',
+        user_login: 'ado_ow',
+        user_id: '154674662',
+        online: false,
+        team_url: 'shanghai-dragons.png',
+        team: 'Shanghai Dragons'
+    }, {
+        name: 'Fearless',
+        user_login: 'dksktl12345',
+        user_id: '173255274',
+        online: false,
+        team_url: 'shanghai-dragons.png',
+        team: 'Shanghai Dragons'
     }
 ];
 
@@ -654,7 +836,7 @@ exports.teams = [
         name: 'Philadelphia Fusion',
         logo: 'philadelphia-fusion.png'
     }, {
-        name: 'SF Shock',
+        name: 'San Francisco Shock',
         logo: 'sf-shock.png'
     }, {
         name: 'Seoul Dynasty',
