@@ -23,13 +23,15 @@ class StreamerCards extends Component {
                             <div className="demo-grid">
                                 <div className="card-header">
                                     <div>
-                                        <div style={{ fontSize: '18px' }}>{stream.name}</div>
+                                        <div>{stream.name}</div>
                                         <div style={{ color: 'green' }}>{stream.online ? 'Online' : 'Offline'}</div>
                                     </div>
                                 </div>
-                                <div style={{ textAlign: 'center', position: 'relative'}}>
-                                    <div><img src={window.location.origin + `/img/team-logos/${stream.team_url}`} style={{height: '50px' }}/></div>
-                                    <div style={{ position: 'absolute', bottom: '0', width: '100%'}}>Viewers: {stream.viewer_count}</div>
+                                <div className="demographics">
+                                    <div className="team-logo">
+                                        <img src={window.location.origin + `/img/team-logos/${stream.team_url}`} />
+                                    </div>
+                                    <div>Viewers: {stream.viewer_count}</div>
                                 </div>
                                 <div style={{ textAlign: 'center' }}>
                                     <a href={`https://www.twitch.tv/${stream.user_login}`} target="_blank"><button>Visit</button></a>
@@ -43,11 +45,11 @@ class StreamerCards extends Component {
                     <div className="streamer-card" key={stream.user_id}>
                         <div className="card-grid">
                             <div>
-                                <img src={window.location.origin + `/img/team-logos/${stream.team_url}`} style={{ height: '200px' }} alt={stream.user_login} />
+                                <img src={window.location.origin + `/img/team-logos/${stream.team_url}`}alt={stream.user_login} style={{ height: '200px' }} />
                             </div>
                             <div className="demo-grid">
                                 <div className="card-header">
-                                    <div style={{ fontSize: '18px' }}>{stream.name}</div>
+                                    <div>{stream.name}</div>
                                     <div style={{ color: 'red' }}>{stream.online ? 'Online' : 'Offline'}</div>
                                 </div>
                                 <div></div>

@@ -97,7 +97,12 @@ class App extends Component {
         <div className="header">
           <img src={window.location.origin + '/img/twitch_white_logo.png'} alt="Twitch Logo" />
         </div>
-        <Filters filteredTeam={this.state.filteredTeam} filteredStatus={this.state.filteredStatus} filterTeams={this.filterTeams} filterStatus={this.filterStatus} clearFilters={this.clearFilters} />
+        <Filters 
+          filteredTeam={this.state.filteredTeam} 
+          filteredStatus={this.state.filteredStatus} 
+          filterTeams={this.filterTeams} 
+          filterStatus={this.filterStatus} 
+          clearFilters={this.clearFilters} />
         <div style={{ paddingBottom: '10px' }}>
           {content}
         </div>

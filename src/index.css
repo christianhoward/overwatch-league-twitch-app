@@ -4,6 +4,16 @@ body {
   font-family: sans-serif;
 }
 
+button {
+  background-color: #6441A4;
+  width: 100px;
+  height: 40px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/* Header/Nav Area */
 .header {
   background-color: #6441A4;
   height: 75px;
@@ -15,6 +25,17 @@ body {
   padding-top: 12.5px;
 }
 
+/* Filters Area */
+.owl-logo {
+  text-align: center;
+  padding: 10px;
+}
+
+.owl-logo > img {
+  height: 100px;
+  border-radius: 5px;
+}
+  /* Team Filter */
 .team-filter-grid {
   text-align: center;
   display: grid;
@@ -31,57 +52,14 @@ body {
   filter: drop-shadow(5px 5px 5px #6441A4);
 }
 
-.owl-logo {
-  text-align: center;
-  padding: 10px;
-}
-
-.owl-logo > img {
-  height: 100px;
-  border-radius: 5px;
-}
-
 .team-dropdown {
   display: none;
 }
 
+  /* Status Filter */
 .status-filter {
   text-align: center;
   padding: 10px;
-}
-
-.streamers-grid {
-  margin: 0;
-  padding-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 1rem;
-}
-
-.streamer-card {
-  background: white;
-  width: 400px;
-  height: 200px;
-  border: 2px solid black;
-  border-radius: 5px;
-  color: black;
-  margin: 0 auto;
-  position: relative;
-}
-
-.streamer-card:hover {
-  box-shadow: 5px 5px 3px rgba(100, 65, 164, 0.70);
-  top: -5px;
-  left: -5px;
-}
-
-.card-header {
-  text-align: center;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
 
 input[type=radio] + label {
@@ -110,13 +88,39 @@ input[type=radio]:checked + label {
 	box-shadow: 0 0 0 1pt #6441A4;
 }
 
-button {
-  background-color: #6441A4;
-  width: 100px;
-  height: 40px;
-  color: white;
-  font-size: 16px;
+/* Streams Area */
+.streamers-grid {
+  margin: 0;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 1rem;
+}
+
+.streamer-card {
+  background: white;
+  width: 400px;
+  height: 200px;
+  border: 2px solid black;
   border-radius: 5px;
+  color: black;
+  margin: 0 auto;
+  position: relative;
+}
+
+.streamer-card:hover {
+  box-shadow: 5px 5px 3px rgba(100, 65, 164, 0.70);
+  top: -5px;
+  left: -5px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card-header {
+  text-align: center;
 }
 
 .demo-grid {
@@ -124,6 +128,19 @@ button {
   grid-template-rows: 80px 70px 50px;
 }
 
+.demographics {
+  text-align: center;
+  position: relative;
+}
+
+.demographics > div:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* Loading Animations */
 .loader {
   position: absolute;
   left: 50%;
@@ -139,6 +156,11 @@ button {
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .animate-bottom {
@@ -159,11 +181,7 @@ button {
   to{ bottom:0; opacity:1 }
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
+/* Mobile Layout */
 @media only screen and (max-width: 750px) {
   .header {
     height: 50px;
