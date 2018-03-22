@@ -11,7 +11,8 @@ class App extends Component {
     this.state = { 
       streams: [],
       filteredTeam: '',
-      filteredStatus: ''
+      filteredStatus: '',
+      loading: true
     }
     this.filterTeams = this.filterTeams.bind(this);
     this.filterStatus = this.filterStatus.bind(this);
@@ -20,6 +21,7 @@ class App extends Component {
   componentDidMount() {
     this.setState({ streams: streams.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1) });
     setTimeout(() => { this.getDataStrings()}, 1000);
+    setTimeout(() => { this.setState({ loading: false }) }, 2000);
   }
   getStreamData(activeStreams) {
     let newState = this.state.streams;
@@ -84,6 +86,12 @@ class App extends Component {
     this.setState({ filteredStatus: '', filteredTeam: '' });
   }
   render() {
+    let content;
+    if (this.state.loading) {
+      content = <div className="loader" style={{ textAlign: 'center' }}></div>;
+    } else {
+      content = <div className="animate-bottom"><Streamers {...this.state} /></div>;
+    }
     return (
       <div>
         <div className="header">
@@ -91,7 +99,7 @@ class App extends Component {
         </div>
         <Filters filteredTeam={this.state.filteredTeam} filteredStatus={this.state.filteredStatus} filterTeams={this.filterTeams} filterStatus={this.filterStatus} clearFilters={this.clearFilters} />
         <div style={{ paddingBottom: '10px' }}>
-          <Streamers {...this.state} />
+          {content}
         </div>
       </div>
     );
