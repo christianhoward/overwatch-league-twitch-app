@@ -71,7 +71,11 @@ class App extends Component {
     this.getStreamData(json.data);
   }
   filterTeams(team) {
-    this.setState({ filteredTeam: team });
+    if (this.state.filteredTeam === team) {
+      this.setState({ filteredTeam: '' });
+    } else {
+      this.setState({ filteredTeam: team });
+    }
   }
   filterStatus(status) {
     this.setState({ filteredStatus: status})
