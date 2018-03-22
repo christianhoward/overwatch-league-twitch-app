@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Filters from './Filters';
 import Streamers from './StreamerCards';
 
-import { streams } from './data/data.js';
+import { streams } from './data/data';
+import { clientID } from './config/keys';
 
 class App extends Component {
   constructor(props) {
@@ -66,10 +67,9 @@ class App extends Component {
   async getTwitchData(url) {
     const response = await fetch(url, { 
       method: 'GET', 
-      headers: { 'Client-ID': 'chrlypyhyi13ef5uf1dilc9amybdp3' }
+      headers: { 'Client-ID': clientID }
     });
     let json = await response.json();
-    // console.log(json.data);
     this.getStreamData(json.data);
   }
   filterTeams(team) {
