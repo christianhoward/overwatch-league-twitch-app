@@ -29,7 +29,7 @@ class StreamerCards extends Component {
                                 </div>
                                 <div className="demographics">
                                     <div className="team-logo">
-                                        <img src={window.location.origin + `/img/team-logos/${stream.team_url}`} />
+                                        <img src={window.location.origin + `/img/team-logos/${stream.team_url}`} alt={stream.team} />
                                     </div>
                                     <div>Viewers: {stream.viewer_count}</div>
                                 </div>
