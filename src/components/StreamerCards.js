@@ -21,9 +21,12 @@ class StreamerCards extends Component {
                                 <img src={stream.thumbnail_url} alt={stream.user_login} />
                             </div>
                             <div className="demo-grid">
-                                <div className="card-header">
-                                    <div style={{ fontSize: '18px' }}>{stream.name}</div>
-                                    <div style={{ color: 'green' }}>{stream.online ? 'Online' : 'Offline'}</div>
+                                <div className="card-header" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
+                                    <div><img src={window.location.origin + `/img/team-logos/${stream.team_url}`} style={{height: '50px' }}/></div>
+                                    <div>
+                                        <div style={{ fontSize: '18px' }}>{stream.name}</div>
+                                        <div style={{ color: 'green' }}>{stream.online ? 'Online' : 'Offline'}</div>
+                                    </div>
                                 </div>
                                 <div style={{ paddingLeft: '5px' }}>
                                     <div>Viewers: {stream.viewer_count}</div>
@@ -40,7 +43,7 @@ class StreamerCards extends Component {
                     <div className="streamer-card" key={stream.user_id}>
                         <div className="card-grid">
                             <div>
-                                <img src={window.location.origin + `/img/team-logos/${stream.thumbnail_url}`} style={{ height: '200px' }} alt={stream.user_login} />
+                                <img src={window.location.origin + `/img/team-logos/${stream.team_url}`} style={{ height: '200px' }} alt={stream.user_login} />
                             </div>
                             <div className="demo-grid">
                                 <div className="card-header">
