@@ -1,3 +1,3 @@
 module.exports = {
-    clientID: process.env.CLIENTID
+    clientID: process.env.REACT_APP_CLIENTID
 }
