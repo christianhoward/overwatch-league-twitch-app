@@ -207,4 +207,9 @@ input[type=radio]:checked + label {
   .team-filter-grid {
     display: none;
   }
+
+  .loader {
+    left: 50%;
+    top: 70%;
+  }
 }
