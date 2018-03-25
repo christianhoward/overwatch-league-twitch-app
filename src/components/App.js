@@ -38,9 +38,7 @@ class App extends Component {
         }
       });
     });
-    this.setState({ streams: newState.sort((a, b) => {
-      return a.online && !b.online || a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1;
-      }) 
+    this.setState({ streams: newState.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1) 
     });
   }
   getDataStrings() {
