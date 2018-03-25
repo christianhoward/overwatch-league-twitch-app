@@ -122,6 +122,10 @@ input[type=radio]:checked + label {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.stream-img > img {
+  height: 200px;
+}
+
 .card-header {
   text-align: center;
 }
@@ -214,5 +218,19 @@ input[type=radio]:checked + label {
   .loader {
     left: 50%;
     top: 70%;
+  }
+
+  .streamer-card {
+    width: 350px;
+    height: 175px;
+  }
+
+  .stream-img > img {
+    height: 175px;
+  }
+
+  .demo-grid {
+    display: grid;
+    grid-template-rows: 60px 70px 45px;
   }
 }

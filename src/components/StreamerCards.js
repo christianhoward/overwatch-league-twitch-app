@@ -17,7 +17,7 @@ class StreamerCards extends Component {
                 return (
                     <div className="streamer-card" key={stream.user_id}>
                         <div className="card-grid">
-                            <div>
+                            <div className="stream-img">
                                 <img src={stream.thumbnail_url} alt={stream.user_login} />
                             </div>
                             <div className="demo-grid">
@@ -44,8 +44,8 @@ class StreamerCards extends Component {
                 return (
                     <div className="streamer-card" key={stream.user_id}>
                         <div className="card-grid">
-                            <div>
-                                <img src={window.location.origin + `/img/team-logos/${stream.team_url}`}alt={stream.user_login} style={{ height: '200px' }} />
+                            <div className="stream-img">
+                                <img src={window.location.origin + `/img/team-logos/${stream.team_url}`}alt={stream.user_login} />
                             </div>
                             <div className="demo-grid">
                                 <div className="card-header">
