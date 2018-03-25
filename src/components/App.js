@@ -38,8 +38,9 @@ class App extends Component {
         }
       });
     });
-    this.setState({ streams: newState.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1) 
-    });
+    this.setState({ streams: newState.sort((a, b) => {
+      return b.online - a.online || a.name.toLowerCase().localeCompare(b.name.toLowerCase()); 
+    }) });
   }
   getDataStrings() {
     let userIDsAtlantic = '';
