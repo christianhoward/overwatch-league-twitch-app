@@ -20,9 +20,9 @@ class App extends Component {
     this.clearFilters = this.clearFilters.bind(this);
   }
   componentDidMount() {
-    this.setState({ streams: streams.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1) });
-    setTimeout(() => { this.getDataStrings()}, 1000);
-    setTimeout(() => { this.setState({ loading: false }) }, 2000);
+    this.setState({ streams: streams });
+    setTimeout(() => { this.getDataStrings()}, 2000);
+    setTimeout(() => { this.setState({ loading: false }) }, 4000);
   }
   getStreamData(activeStreams) {
     let newState = this.state.streams;
@@ -38,7 +38,10 @@ class App extends Component {
         }
       });
     });
-    this.setState({ streams: newState });
+    this.setState({ streams: newState.sort((a, b) => {
+      return a.online && !b.online || a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1;
+      }) 
+    });
   }
   getDataStrings() {
     let userIDsAtlantic = '';
