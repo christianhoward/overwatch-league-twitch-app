@@ -29,7 +29,7 @@ class App extends Component {
     newState.forEach(user => {
       activeStreams.find(onlineUser => {
         if (onlineUser.user_id === user.user_id) {
-          let url = onlineUser.thumbnail_url.replace(/({width})|({height})/ig, 200);
+          let url = onlineUser.thumbnail_url.replace(/({height})/ig, 200).replace(/({width})/ig, 275);
           user.online = true;
           user.thumbnail_url = url;
           user.viewer_count = onlineUser.viewer_count;
