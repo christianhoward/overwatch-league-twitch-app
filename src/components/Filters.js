@@ -15,19 +15,11 @@ class Filters extends Component {
     }
     renderTeams() {
         return this.state.teams.map(team => {
-            if (team.name === this.props.filteredTeam) {
-                return (
-                    <div className="team-logo active" key={team.name}>
-                        <img src={window.location.origin + `/img/team-logos/${team.logo}`} alt={team.name} onClick={(e) => this.props.filterTeams(e.target.getAttribute('data-name'))} data-name={team.name}/>
-                    </div>
-                );
-            } else {
-                return (
-                    <div className="team-logo" key={team.name}>
-                        <img src={window.location.origin + `/img/team-logos/${team.logo}`} alt={team.name} onClick={(e) => this.props.filterTeams(e.target.getAttribute('data-name'))} data-name={team.name}/>
-                    </div>
-                );
-            }
+            return (
+                <div className={team.name === this.props.filteredTeam ? 'team-logo active' : 'team-logo'} key={team.name}>
+                    <img src={window.location.origin + `/img/team-logos/${team.logo}`} alt={team.name} onClick={(e) => this.props.filterTeams(e.target.getAttribute('data-name'))} data-name={team.name}/>
+                </div>
+            );
         });
     }
     renderTeamDropdown() {
