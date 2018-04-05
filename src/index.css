@@ -239,7 +239,7 @@ input[type=radio]:checked + label {
     left: 50%;
     top: 70%;
   }
-
+  
   .streamer-card {
     width: 350px;
     height: 175px;
@@ -257,5 +257,15 @@ input[type=radio]:checked + label {
   .card-grid {
     display: grid;
     grid-template-columns: 248px 1fr;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .streamers-grid {
+    margin: 0;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-gap: 1rem;
   }
 }
