@@ -91,6 +91,13 @@ exports.streams = [
         team_url: 'dallas-fuel.png',
         team: 'Dallas Fuel'
     }, {
+        name: 'Unkoe',
+        user_login: 'unkoeee',
+        user_id: '50447542',
+        online: false,
+        team_url: 'dallas-fuel.png',
+        team: 'Dallas Fuel'
+    }, {
         name: 'OGE',
         user_login: 'oge_ow',
         user_id: '191580639',
@@ -101,13 +108,6 @@ exports.streams = [
         name: 'Taimou',
         user_login: 'taimoutv',
         user_id: '54581600',
-        online: false,
-        team_url: 'dallas-fuel.png',
-        team: 'Dallas Fuel'
-    }, {
-        name: 'Custa',
-        user_login: 'custa',
-        user_id: '114865766',
         online: false,
         team_url: 'dallas-fuel.png',
         team: 'Dallas Fuel'
@@ -266,6 +266,13 @@ exports.streams = [
         team_url: 'houston-outlaws.png',
         team: 'Houston Outlaws'
     }, {
+        name: 'Arhan',
+        user_login: 'arhan_ow',
+        user_id: '64659776',
+        online: false,
+        team_url: 'houston-outlaws.png',
+        team: 'Houston Outlaws'
+    }, {
         name: 'Rawkus',
         user_login: 'itsrawkus',
         user_id: '27855530',
@@ -364,16 +371,9 @@ exports.streams = [
         team_url: 'london-spitfire.png',
         team: 'London Spitfire'
     }, {
-        name: 'Asher',
-        user_login: 'asher_ow',
-        user_id: '153223108',
-        online: false,
-        team_url: 'la-gladiators.png',
-        team: 'Los Angeles Gladiators'
-    }, {
-        name: 'Surefour',
-        user_login: 'surefour',
-        user_id: '2982838',
+        name: 'Silkthread',
+        user_login: 'silkthread',
+        user_id: '26437807',
         online: false,
         team_url: 'la-gladiators.png',
         team: 'Los Angeles Gladiators'
@@ -381,13 +381,6 @@ exports.streams = [
         name: 'iRemiix',
         user_login: 'iremiixz',
         user_id: '48730158',
-        online: false,
-        team_url: 'la-gladiators.png',
-        team: 'Los Angeles Gladiators'
-    }, {
-        name: 'Fissure',
-        user_login: 'fissure_ow',
-        user_id: '144636778',
         online: false,
         team_url: 'la-gladiators.png',
         team: 'Los Angeles Gladiators'
@@ -420,23 +413,44 @@ exports.streams = [
         team_url: 'la-gladiators.png',
         team: 'Los Angeles Gladiators'
     }, {
-        name: 'Silkthread',
-        user_login: 'silkthread',
-        user_id: '26437807',
+        name: 'Asher',
+        user_login: 'asher_ow',
+        user_id: '153223108',
         online: false,
-        team_url: 'la-valiant.png',
-        team: 'Los Angeles Valiant'
+        team_url: 'la-gladiators.png',
+        team: 'Los Angeles Gladiators'
     }, {
-        name: 'Grimreality',
-        user_login: 'grimrealityow',
-        user_id: '136539228',
+        name: 'Surefour',
+        user_login: 'surefour',
+        user_id: '2982838',
         online: false,
-        team_url: 'la-valiant.png',
-        team: 'Los Angeles Valiant'
+        team_url: 'la-gladiators.png',
+        team: 'Los Angeles Gladiators'
+    }, {
+        name: 'Fissure',
+        user_login: 'fissure_ow',
+        user_id: '144636778',
+        online: false,
+        team_url: 'la-gladiators.png',
+        team: 'Los Angeles Gladiators'
+    }, {
+        name: 'Void',
+        user_login: 'ow_void',
+        user_id: '153696106',
+        online: false,
+        team_url: 'la-gladiators.png',
+        team: 'Los Angeles Gladiators'
     }, {
         name: 'Kariv',
         user_login: 'kariv2',
         user_id: '135122504',
+        online: false,
+        team_url: 'la-valiant.png',
+        team: 'Los Angeles Valiant'
+    }, {
+        name: 'Bunny',
+        user_login: 'cownsgur123',
+        user_id: '148495863',
         online: false,
         team_url: 'la-valiant.png',
         team: 'Los Angeles Valiant'
@@ -455,9 +469,9 @@ exports.streams = [
         team_url: 'la-valiant.png',
         team: 'Los Angeles Valiant'
     }, {
-        name: 'Envy',
-        user_login: 'envy0w',
-        user_id: '160050719',
+        name: 'Custa',
+        user_login: 'custa',
+        user_id: '114865766',
         online: false,
         team_url: 'la-valiant.png',
         team: 'Los Angeles Valiant'
@@ -472,13 +486,6 @@ exports.streams = [
         name: 'Numlocked',
         user_login: 'numlocked',
         user_id: '8725477',
-        online: false,
-        team_url: 'la-valiant.png',
-        team: 'Los Angeles Valiant'
-    }, {
-        name: 'Unkoe',
-        user_login: 'unkoeee',
-        user_id: '50447542',
         online: false,
         team_url: 'la-valiant.png',
         team: 'Los Angeles Valiant'
@@ -507,6 +514,13 @@ exports.streams = [
         name: 'Meko',
         user_login: 'mekoppa',
         user_id: '152073095',
+        online: false,
+        team_url: 'ny-excelsior.png',
+        team: 'New York Excelsior'
+    }, {
+        name: 'Anamo',
+        user_login: 'xotjdxofkd3',
+        user_id: '145052671',
         online: false,
         team_url: 'ny-excelsior.png',
         team: 'New York Excelsior'
@@ -700,13 +714,6 @@ exports.streams = [
         team_url: 'sf-shock.png',
         team: 'San Francisco Shock'
     }, {
-        name: 'Bunny',
-        user_login: 'cownsgur123',
-        user_id: '148495863',
-        online: false,
-        team_url: 'seoul-dynasty.png',
-        team: 'Seoul Dynasty'
-    }, {
         name: 'Miro',
         user_login: 'a_miro',
         user_id: '139765945',
@@ -801,6 +808,13 @@ exports.streams = [
         name: 'Fearless',
         user_login: 'dksktl12345',
         user_id: '173255274',
+        online: false,
+        team_url: 'shanghai-dragons.png',
+        team: 'Shanghai Dragons'
+    }, {
+        name: 'Daemin',
+        user_login: 'daemin1004',
+        user_id: '157871139',
         online: false,
         team_url: 'shanghai-dragons.png',
         team: 'Shanghai Dragons'
