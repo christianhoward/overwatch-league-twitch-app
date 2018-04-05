@@ -97,7 +97,7 @@ class App extends Component {
     return (
       <div>
         <div className="header">
-          <img src={window.location.origin + '/img/twitch_white_logo.png'} alt="Twitch Logo" />
+          <img src={`https://res.cloudinary.com/hg88pz06q/image/upload/v1522906875/img/twitch_white_logo.png`} alt="Twitch Logo" />
         </div>
         <Filters 
           filteredTeam={this.state.filteredTeam} 
