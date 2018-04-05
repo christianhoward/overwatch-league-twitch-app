@@ -92,7 +92,12 @@ class App extends Component {
     if (this.state.loading) {
       content = <div className="loader" style={{ textAlign: 'center' }}></div>;
     } else {
-      content = <div className="animate-bottom"><Streamers {...this.state} /></div>;
+      content = <div className="animate-bottom">
+        <Streamers {...this.state} />
+        <div className="footer">
+          created by: <a href="https://www.christianhoward.net" target="_blank" rel="noopener noreferrer">Christian Howard</a>
+        </div>
+      </div>;
     }
     return (
       <div>
