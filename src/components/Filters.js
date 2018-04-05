@@ -17,7 +17,7 @@ class Filters extends Component {
         return this.state.teams.map(team => {
             return (
                 <div className={team.name === this.props.filteredTeam ? 'team-logo active' : 'team-logo'} key={team.name}>
-                    <img src={window.location.origin + `/img/team-logos/${team.logo}`} alt={team.name} onClick={(e) => this.props.filterTeams(e.target.getAttribute('data-name'))} data-name={team.name}/>
+                    <img src={`https://res.cloudinary.com/hg88pz06q/image/upload/v1522906875/img/team-logos/${team.logo}`} alt={team.name} onClick={(e) => this.props.filterTeams(e.target.getAttribute('data-name'))} data-name={team.name}/>
                 </div>
             );
         });
@@ -44,7 +44,7 @@ class Filters extends Component {
         return (
             <div>
                 <div className="owl-logo">
-                    <img src={window.location.origin + '/img/owl-logo.jpg'} onClick={(e) => this.props.clearFilters()} alt="Overwatch League Logo" />
+                    <img src={`https://res.cloudinary.com/hg88pz06q/image/upload/v1522906875/img/owl-logo.jpg`} onClick={(e) => this.props.clearFilters()} alt="Overwatch League Logo" />
                 </div>  
                 <div className="team-dropdown">
                     <select value={this.props.filteredTeam} onChange={(e) => this.props.filterTeams(e.target.options[e.target.selectedIndex].getAttribute('data-name'))}>

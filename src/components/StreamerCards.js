@@ -45,7 +45,7 @@ class StreamerCards extends Component {
                     <div className="streamer-card" key={stream.user_id}>
                         <div className="card-grid">
                             <div className="stream-img">
-                                <img src={window.location.origin + `/img/team-logos/${stream.team_url}`}alt={stream.user_login} />
+                                <img src={`https://res.cloudinary.com/hg88pz06q/image/upload/v1522906875/img/team-logos/${stream.team_url}`} alt={stream.user_login} />
                             </div>
                             <div className="demo-grid">
                                 <div className="card-header">
