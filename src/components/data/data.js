@@ -1,12 +1,5 @@
 exports.streams = [
     {
-        name: 'DreamKazper',
-        user_login: 'dreamkazper',
-        user_id: '68624555',
-        online: false,
-        team_url: 'boston-uprising.png',
-        team: 'Boston Uprising'
-    }, {
         name: 'Snow',
         user_login: 'snow_iwnl',
         user_id: '125494549',
