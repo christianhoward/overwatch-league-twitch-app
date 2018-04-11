@@ -56,6 +56,13 @@ exports.streams = [
         team_url: 'boston-uprising.png',
         team: 'Boston Uprising'
     }, {
+        name: 'AimGod',
+        user_login: 'aimgod99',
+        user_id: '139934912',
+        online: false,
+        team_url: 'boston-uprising.png',
+        team: 'Boston Uprising'
+    }, {
         name: 'Kellex',
         user_login: 'keliex',
         user_id: '76581890',
@@ -851,5 +858,21 @@ exports.teams = [
     }, {
         name: 'Shanghai Dragons',
         logo: 'shanghai-dragons.png'
+    }
+];
+
+exports.roles = [
+    {
+        name: 'Tank',
+        icon: 'tank.png'
+    }, {
+        name: 'Flex',
+        icon: 'flex.png'
+    }, {
+        name: 'Offense',
+        icon: 'offense.png'
+    }, {
+        name: 'Support',
+        icon: 'support.png'
     }
 ];
