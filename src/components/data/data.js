@@ -84,13 +84,6 @@ exports.streams = [
         team_url: 'dallas-fuel.png',
         team: 'Dallas Fuel'
     }, {
-        name: 'Rascal',
-        user_login: 'rascal0723',
-        user_id: '144636878',
-        online: false,
-        team_url: 'dallas-fuel.png',
-        team: 'Dallas Fuel'
-    }, {
         name: 'Unkoe',
         user_login: 'unkoeee',
         user_id: '50447542',
