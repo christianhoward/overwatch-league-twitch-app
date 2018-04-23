@@ -476,6 +476,20 @@ exports.streams = [
         team_url: 'la-valiant.png',
         team: 'Los Angeles Valiant'
     }, {
+        name: 'Finnsi',
+        user_login: 'finnsiow',
+        user_id: '90238430',
+        online: false,
+        team_url: 'la-valiant.png',
+        team: 'Los Angeles Valiant'
+    }, {
+        name: 'KSF',
+        user_login: 'ksfksf',
+        user_id: '40581472',
+        online: false,
+        team_url: 'la-valiant.png',
+        team: 'Los Angeles Valiant'
+    }, {
         name: 'Numlocked',
         user_login: 'numlocked',
         user_id: '8725477',
