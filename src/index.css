@@ -4,6 +4,16 @@ body {
   font-family: sans-serif;
 }
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+
 button {
   background-color: #6441A4;
   width: 100px;
